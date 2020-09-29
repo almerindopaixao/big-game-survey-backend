@@ -1,57 +1,20 @@
-import Game from './GameModel';
+import RecordSchema from '../database/RecordSchema';
 
-export default class Record {
-  private _id: number;
-  private _name: string;
-  private _age: number;
-  private _moment: Date;
-  private _game: Game; //game_id
+interface Record {
+  name: string;
+  age: number;
+  game_id: number;
+}
 
-  constructor(id: number, name: string, age: number, moment: Date, game: Game) {
-    this._id = id;
-    this._name = name;
-    this._age = age;
-    this._moment = moment;
-    this._game = game;
-  }
+export default class RecordModel {
+  // private _game: Game; //game_id
+  public errors: string[] = [];
+  public record: Record | null = null;
 
-  get id(): number {
-    return this._id;
-  }
+  constructor(private body: Record) {}
 
-  set id(value: number) {
-    this._id = value;
-  }
-
-  get name(): string {
-    return this._name;
-  }
-
-  set name(value: string) {
-    this._name = value;
-  }
-
-  get age(): number {
-    return this._age;
-  }
-
-  set age(value: number) {
-    this._age = value;
-  }
-
-  get moment(): Date {
-    return this._moment;
-  }
-
-  set moment(value: Date) {
-    this._moment = value;
-  }
-
-  get game(): Game {
-    return this._game;
-  }
-
-  set game(value: Game) {
-    this._game = value;
+  async CreateRecord(): Promise<void> {
+    if (this.errors.length > 0) return;
+    this.record = ((await RecordSchema.create(this.body)) as unknown) as Record;
   }
 }

@@ -7,6 +7,7 @@ import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 
 import GameRouter from './routes/GameRouter';
+import RecordRouter from './routes/RecordRouter';
 
 dotenv.config();
 
@@ -28,6 +29,7 @@ class App {
 
   router(): void {
     this.app.use('/games', GameRouter);
+    this.app.use('/records', RecordRouter);
   }
 
   connection(): void {

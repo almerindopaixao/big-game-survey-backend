@@ -19,13 +19,11 @@ class GameController {
         id: number;
         title: string;
         platform: string;
-        genre_id: number;
       }[] = games.map((value) => {
         return {
           id: value._id,
           title: value.title,
           platform: Platform[value.platform],
-          genre_id: value.genre_id,
         };
       });
 
