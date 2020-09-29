@@ -1,0 +1,115 @@
+async function eu() {
+      await GenreSchema.create({
+        name: 'Shooter',
+      });
+
+      await GenreSchema.create({
+        name: 'MOBA',
+      });
+
+      await GenreSchema.create({
+        name: 'RPG',
+      });
+
+      await GenreSchema.create({
+        name: 'Battle Royale',
+      });
+
+      await GameSchema.create({
+        title: 'The Witcher',
+        platform: 2,
+        genre_id: 2,
+      });
+
+      await GameSchema.create({
+        title: 'League of legends',
+        platform: 0,
+        genre_id: 1,
+      });
+
+      await GameSchema.create({
+        title: 'CS GO',
+        platform: 0,
+        genre_id: 0,
+      });
+
+      await GameSchema.create({
+        title: 'Cyberpunk 2077',
+        platform: 0,
+        genre_id: 2,
+      });
+
+      await GameSchema.create({
+        title: 'Cyberpunk 2077',
+        platform: 2,
+        genre_id: 2,
+      });
+
+      await GameSchema.create({
+        title: 'Goog of war',
+        platform: 0,
+        genre_id: 2,
+      });
+
+      await GameSchema.create({
+        title: 'God of war',
+        platform: 1,
+        genre_id: 2,
+      });
+
+      await GameSchema.create({
+        title: 'Overwatch',
+        platform: 0,
+        genre_id: 0,
+      });
+
+      await GameSchema.create({
+        title: 'Valorant',
+        platform: 0,
+        genre_id: 0,
+      });
+
+      await GameSchema.create({
+        title: 'Fall Guys',
+        platform: 0,
+        genre_id: 3,
+      });
+
+      await GameSchema.create({
+        title: 'Fall Guys',
+        platform: 1,
+        genre_id: 3,
+      });
+
+      await GameSchema.create({
+        title: 'Fortnite',
+        platform: 0,
+        genre_id: 3,
+      });
+
+      await GameSchema.create({
+        title: 'Dragon Age Inquisition',
+        platform: 2,
+        genre_id: 2,
+      });
+
+      await GameSchema.create({
+        title: 'Dragon Age Inquisition',
+        platform: 1,
+        genre_id: 2,
+      });
+
+      await RecordSchema.create({
+        name: 'Tulio',
+        age: 19,
+        game_id: 2,
+      });
+
+      await RecordSchema.create({
+        name: 'Alex',
+        age: 33,
+        game_id: 10,
+      });
+    }
+
+    eu();

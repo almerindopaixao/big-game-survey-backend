@@ -1,6 +1,6 @@
-import Game from './Game';
+import Game from './GameModel';
 
-export default class Genre {
+export default class Record {
   private _id: number;
   private _name: string;
   private _age: number;

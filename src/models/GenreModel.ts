@@ -1,4 +1,4 @@
-import Game from './Game';
+import Game from './GameModel';
 
 export default class Genre {
   private _id: number;
