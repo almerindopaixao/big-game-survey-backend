@@ -1,9 +1,10 @@
 import express from 'express';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
 
-const door = '3333';
-
-app.listen(door, () => {
-  console.log(`Servidor rodando na porta ${door}`);
+app.listen(process.env.APP_PORT, () => {
+  console.log(`Servidor rodando na porta ${process.env.APP_PORT}`);
 });
