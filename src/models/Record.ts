@@ -5,7 +5,7 @@ export default class Genre {
   private _name: string;
   private _age: number;
   private _moment: Date;
-  private _game: Game;
+  private _game: Game; //game_id
 
   constructor(id: number, name: string, age: number, moment: Date, game: Game) {
     this._id = id;

@@ -6,7 +6,7 @@ export default class Game {
   private _id: number;
   private _title: string;
   private _platform: Platform;
-  private _genre: Genre;
+  private _genre: Genre; // genere_id
   private _records: Record[] = [];
 
   constructor(id: number, title: string, platform: Platform, genre: Genre) {
