@@ -1,32 +1,16 @@
-import Game from './GameModel';
+import GenreSchema from '../database/GenreSchema';
 
-export default class Genre {
-  private _id: number;
-  private _name: string;
-  private _games: Array<Game> = [];
+interface Genre {
+  _id: number;
+  name: string;
+  _v: number;
+}
 
-  constructor(id: number, name: string) {
-    this._id = id;
-    this._name = name;
-  }
-
-  get id(): number {
-    return this._id;
-  }
-
-  set id(value: number) {
-    this._id = value;
-  }
-
-  get name(): string {
-    return this._name;
-  }
-
-  set name(value: string) {
-    this._name = value;
-  }
-
-  get games(): Game[] {
-    return this._games;
+export default class GenreModel {
+  static async findGenreById(id: number): Promise<{ name: string }> {
+    const genre = ((await GenreSchema.findById(id)) as unknown) as Genre;
+    return {
+      name: genre.name,
+    };
   }
 }

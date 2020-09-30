@@ -1,9 +1,12 @@
 import RecordSchema from '../database/RecordSchema';
 
 interface Record {
+  _id?: number;
   name: string;
   age: number;
   game_id: number;
+  _v?: number;
+  moment?: Date;
 }
 
 export default class RecordModel {
