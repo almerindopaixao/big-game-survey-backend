@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const app_1 = __importDefault(require("./app"));
-const port = process.env.APP_PORT || 8080;
+const port = process.env.APP_PORT || process.env.PORT;
 app_1.default.on('ok', () => {
     app_1.default.listen(port);
 });
