@@ -1,9 +1,0 @@
-TD_GAME                          		TD_GENRE
-                            
-id | title | Platform |                         id | name |
------------------------         		-----------
-
-TD_RECORDS
-
-id | name | age | moment |
---------------------------
