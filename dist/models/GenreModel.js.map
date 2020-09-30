@@ -1,0 +1,1 @@
+{"version":3,"file":"GenreModel.js","sourceRoot":"","sources":["../../src/models/GenreModel.ts"],"names":[],"mappings":";;;;;AAAA,0EAAkD;AAQlD,MAAqB,UAAU;IAC7B,MAAM,CAAC,KAAK,CAAC,aAAa,CAAC,EAAU;QACnC,MAAM,KAAK,GAAI,CAAC,MAAM,qBAAW,CAAC,QAAQ,CAAC,EAAE,CAAC,CAAsB,CAAC;QACrE,OAAO;YACL,IAAI,EAAE,KAAK,CAAC,IAAI;SACjB,CAAC;IACJ,CAAC;CACF;AAPD,6BAOC"}
