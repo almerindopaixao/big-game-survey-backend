@@ -4,12 +4,20 @@ API desenvolvida em Node.js utilizando Typescript como linguagem principal e Mon
 
 # Utilização
 
-- Acessar: *GET /[https://big-game-survey-backend.herokuapp.com](https://big-game-survey-backend.herokuapp.com)
-- Games: *GET/ [https://big-game-survey-backend.herokuapp.com/games](https://big-game-survey-backend.herokuapp.com/games)
-- Records:*GET/ [](https://big-game-survey-backend.herokuapp.com/records)
+- Acessar: **GET** /[https://big-game-survey-backend.herokuapp.com](https://big-game-survey-backend.herokuapp.com)
+- Games: **GET**/ [https://big-game-survey-backend.herokuapp.com/games](https://big-game-survey-backend.herokuapp.com/games)
+- Records:**GET**/ [https://big-game-survey-backend.herokuapp.com/records](https://big-game-survey-backend.herokuapp.com/records)
 
 # Cadastro de registros
-- Acessar POST: [](https://big-game-survey-backend.herokuapp.com/records)
+. Acessar pelo método **POST**/ [https://big-game-survey-backend.herokuapp.com/records](https://big-game-survey-backend.herokuapp.com/records)
+. usar no body a seguinte interface JSON:
+```
+{
+  "name": string,
+  "age": int,
+  "game_id": int,
+}
+```
 
 ### Querys
 
