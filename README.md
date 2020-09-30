@@ -50,6 +50,8 @@ API desenvolvida em Node.js utilizando Typescript como linguagem principal e Mon
 
 ## Chaves dos elementos
 
+### Records
+
 - id
 - name
 - age
@@ -67,5 +69,18 @@ API desenvolvida em Node.js utilizando Typescript como linguagem principal e Mon
   "gameTitle": "Dragon Age Inquisition",
   "gamePlatform": "PLAYSTATION",
   "genreName": "RPG"
+}
+```
+### Games
+
+- id
+- title
+- platform
+
+```
+{
+  "id" 0,
+  "title": "The Witcher",
+  "platform": "XBOX"
 }
 ```
