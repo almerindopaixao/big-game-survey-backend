@@ -30,7 +30,7 @@ class RecordController {
     const page = req.query.page ? Number(req.query.page) : 0;
     const linesPerPage = req.query.linesPerPage
       ? Number(req.query.linesPerPage)
-      : 12;
+      : 0;
     const orderBy = req.query.orderBy ? String(req.query.orderBy) : 'moment';
     const direction = req.query.direction
       ? String(req.query.direction)
@@ -72,7 +72,9 @@ class RecordController {
 
     const numberOfElements: number = await RecordModel.countOfRecords(min, max);
 
-    const totalPages: number = Math.ceil(numberOfElements / linesPerPage);
+    let totalPages: number = Math.ceil(numberOfElements / linesPerPage);
+
+    if (totalPages === Infinity) totalPages = 0;
 
     return res.json({
       content: dataRefactory,
